@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img{
+                width:600px;
+                height:500px;
+            }
+        </style>
+        <t1>Animation</t1>
+    </head>
+    <body>
+        <div id="SlideWrapper">
+        <div class="slide">
+            <img src="C:/Users/Alban Ismaili/Desktop/Ush1Al/photo1.jpg" />
+        </div>
+
+        <div class="slide">
+            <img src="C:/Users/Alban Ismaili/Desktop/Ush1Al/photo2.jpg" />
+        </div>
+
+        <div class="slide">
+            <img src="C:/Users/Alban Ismaili/Desktop/Ush1Al/photo3.jpg" />
+        </div>
+
+        </div>
+
+        <script>
+
+            var SlideIndex=0;
+
+            ShowSlides()
+
+            function ShowSlides(){
+
+            var i;
+            var slides=document.getElementsByClassName("slide");
+
+            for(i=0; i<slides.length;i++){
+                slides[i].style.display="none";
+            }
+
+            SlideIndex++;
+
+            slides[SlideIndex-1].style.display="block";
+
+            setTimeout(ShowSlides,3000);
+        }
+
+              
+        </script>
+
+    </body>
+</html>
